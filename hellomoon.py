@@ -85,9 +85,9 @@ else:
             thref=URLdetail+tnasaID+'.html'
             caption=thref + "\n" + tdescription
             if (len(caption) >= 193):
-                caption = caption +" [...]"
+                captionOk = caption[0:193] + " [...]"
             else:
-                caption = caption
-            data={'chat_id':Hook['params']['message']['chat']['id'],'caption':caption,'photo':tthumb,'parse_mode':'Markdown','reply_markup':keyboard_base}
+                captionOk = caption
+            data={'chat_id':Hook['params']['message']['chat']['id'],'caption':captionOk,'photo':tthumb,'parse_mode':'Markdown','reply_markup':keyboard_base}
             richiesta=requests.get(URLTF,verify=False,data=data)
             time.sleep(1)
