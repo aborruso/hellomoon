@@ -83,7 +83,11 @@ else:
             tdescription=json_data['collection']['items'][inizio]['data'][0]['description']
             tnasaID=json_data['collection']['items'][inizio]['data'][0]['nasa_id']
             thref=URLdetail+tnasaID+'.html'
-            catpion=thref + "\n" + tdescription
-            data={'chat_id':Hook['params']['message']['chat']['id'],'caption':catpion[0:193]+" [...]",'photo':tthumb,'parse_mode':'Markdown','reply_markup':keyboard_base}
+            caption=thref + "\n" + tdescription
+            if (len(caption) >= 193):
+                caption = caption +" [...]"
+            else:
+                caption = caption
+            data={'chat_id':Hook['params']['message']['chat']['id'],'caption':caption,'photo':tthumb,'parse_mode':'Markdown','reply_markup':keyboard_base}
             richiesta=requests.get(URLTF,verify=False,data=data)
             time.sleep(1)
