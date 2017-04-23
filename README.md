@@ -209,7 +209,7 @@ else:
 
 ```
 
-Il bot è questo - [@hellomoonbot](https://t.me/hellomoonbot) - e qui sotto le vedete in azione.
+Se volete testarlo il bot è [@hellomoonbot](https://t.me/hellomoonbot) e qui sotto le vedete in azione.
 
 ![](./imgs/hellomoon.gif)
 
@@ -232,7 +232,7 @@ Questo tutorial è scritto per mettere soltanto un piede dentro questo spazio, t
 
 ### Letture consigliate
 
-- [How to easily build a Telegram Bot with Hook.io](How to easily build a Telegram Bot with Hook.io);
+- [How to easily build a Telegram Bot with Hook.io](https://unnikked.ga/how-to-easily-build-a-telegram-bot-with-hook-io-4c144c4abd96);
 - [Building a Chatbot using Telegram and Python](https://www.codementor.io/garethdwyer/building-a-telegram-bot-using-python-part-1-goi5fncay);
 - [Bots: What you need to know](https://www.oreilly.com/ideas/bots-what-you-need-to-know);
 - [Make a Twitter Bot in Python: Iterative Code Examples](https://jitp.commons.gc.cuny.edu/make-a-twitter-bot-in-python-iterative-code-examples/);
