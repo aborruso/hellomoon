@@ -102,8 +102,16 @@ Per creare questo bot non è necessario fare molto di più di quanto fatto per i
  - un modulo per leggere dati in formato JSON;
  - il metedo delle API di Telegram per [inviare foto](https://core.telegram.org/bots/api#sendphoto).
 
-Il codice è solo un po' più complesso ed è quello sottostante. Oltre al modulo `json` aggiungo altri due modoli: `random` per generare dei numeri casuali, in modo da non ricevere per le stessa query sempre le stesse foto, e il modulo `time` per impostare un intervallo minimo tra una chiamata e un'altra alle API di Telegram.
+Il codice è solo un po' più complesso ed è quello sottostante. Oltre al modulo `json` ho aggiunto altri due moduli: `random` per generare dei numeri casuali, in modo da non ricevere per le stessa query sempre le stesse foto, e il modulo `time` per impostare un intervallo minimo tra una chiamata e un'altra alle API di Telegram.
 
+Lo script fa questo:
+
+- raccoglie in chat la parola (o le parole) inviate dall'utente;
+- lancia la query sulle API della NASA e conteggia i risultati;
+- se pari a zero lo script si ferma;
+- se sono >= 1 ne seleziona non più di 4 in modo random;
+- estrae per ogni immagine URL del file a bassa risoluzione, descrizione e ID;
+- invia alla chat ID da cui è arrivata la parola da cercare, la foto, con una didascalia che contiene l'URL alla scheda dell'immagine e la sua descrizione.
 
 ```python
 import json
